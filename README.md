@@ -22,6 +22,6 @@ El sistema se desarrollará utilizando el framework Django, permitiendo la gesti
 
 ## Diagrama de Clases
 
-![Diagrama de Clases](https://github.com/user-attachments/assets/29aad10e-2077-4edd-827a-7d7100c6a924)
+![Diagrama de Clases](https://github.com/user-attachments/assets/df23468b-a8eb-49b0-a3a2-29d68b7db1d8)
 
 
