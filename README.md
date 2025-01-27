@@ -46,7 +46,7 @@ El sistema se desarrollará utilizando el framework Django, permitiendo la gesti
 - [styless.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/styles.css)
 - [ver_facturas.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/ver_facturas.html)
 
-**Capturas de la Interfaz del Programa**
+## Capturas de la Interfaz del Programa
 ![image](https://github.com/user-attachments/assets/55008081-f92b-4a2f-9a7e-318667122b25)
 La interfaz que se muestra en la Figura 1 es donde al ejecutar el programa te redirecciona automáticamente el cual es el register para poder tener una cuenta para el uso del programa.
 
@@ -77,6 +77,8 @@ La interfaz que se muestra en la figura 9 es donde se direcciona al darle click 
 ![image](https://github.com/user-attachments/assets/d45c136e-df5f-47bb-b565-64e4364acfc1)
 La interfaz que se muestra en la figura 10 es donde se direcciona al darle click en "Crear Categoria", ahí se puede crear una categoría de los medicamentos, por ejemplo las vitaminas.
 
+## Reflexión del Proyecto
+El proyecto APE.-Farmacias tiene como objetivo optimizar la gestión de inventarios y ventas de las cadenas de farmacias y facilitar los procesos de transferencia de medicamentos y seguimiento de pedidos entre sucursales. La implementación mediante Django garantiza una gestión eficiente y segura del personal y de los clientes, mientras que varias opciones de envío y autenticación del consumidor mejoran la experiencia de compra. El sistema proporciona un control completo sobre el flujo de productos y la interacción con los clientes a través de su interfaz fácil de usar.
 
 
 
