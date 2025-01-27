@@ -25,7 +25,7 @@ El sistema se desarrollará utilizando el framework Django, permitiendo la gesti
 ![Diagrama de Clases](https://github.com/user-attachments/assets/05ac9178-c2a8-45b1-ae8f-da42d728a5cd)
 
 ## Dirección de Código del Proyecto
--**Aplicaciones Principales**
+**Aplicaciones Principales**
 - [models.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/Cuxibamba/models.py)
 - [admin.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/Cuxibamba/admin.py)
 - [views.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/Cuxibamba/views.py)
