@@ -45,3 +45,17 @@ El sistema se desarrollará utilizando el framework Django, permitiendo la gesti
 - [menú_principal.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/menu_principal.html)
 - [styless.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/styles.css)
 - [ver_facturas.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/ver_facturas.html)
+
+**Capturas de la Interfaz del Programa**
+![image](https://github.com/user-attachments/assets/55008081-f92b-4a2f-9a7e-318667122b25)
+La interfaz que se muestra en la Figura 1 es donde al ejecutar el programa te redirecciona automáticamente el cual es el register para poder tener una cuenta para el uso del programa.
+
+![image](https://github.com/user-attachments/assets/f105a3dc-4b74-49f7-9ee0-70ab9aaa5406)
+La interfaz que se muestra en la Figura 2 es donde se direcciona luego de registrar una cuenta en el programa.
+
+![image](https://github.com/user-attachments/assets/a6a35a59-e949-43ce-a806-0340f8ef8da1)
+La interfaz que se muestra en la Figura 3 es donde se direcciona luego de logearte en el programa, cómo se puede observar tiene un pequeño menú con algunas funciones que ya iré presentando.
+
+
+
+
