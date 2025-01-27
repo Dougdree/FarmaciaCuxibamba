@@ -31,6 +31,8 @@ El sistema se desarrollará utilizando el framework Django, permitiendo la gesti
 - [views.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/Cuxibamba/views.py)
 - [forms.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/Cuxibamba/forms.py)
 - [urls.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/Farmacia/urls.py)
+
+  
 **Dirección de los Templates**
 - [register.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/register.html)
 - [login.](https://github.com/Dougdree/FarmaciaCuxibamba/blob/develop/Farmacia/templates/login.html)
