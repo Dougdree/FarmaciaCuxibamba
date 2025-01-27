@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">Menú Principal</h1>
+        
+        <ul class="space-y-4">
+            <li>
+                <a href="{% url 'crear_medicamento' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Crear Medicamento
+                </a>
+            </li>
+            
+            <li>
+                <a href="{% url 'inventario' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Crear Inventario
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'crear_factura' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Crear Factura
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'ver_facturas' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Ver Facturas
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'gestionar_transferencia' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Gestionar Transferencia
+                </a>
+            </li>
+
+            <!-- Nueva opción para Historial de Transferencias -->
+            <li>
+                <a href="{% url 'historial_transferencias' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Historial de Transferencias
+                </a>
+            </li>
+
+            <!-- Nueva opción para Agregar Categoría -->
+            <li>
+                <a href="{% url 'crear_categoria' %}" class="block text-blue-600 hover:bg-blue-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Agregar Categoría
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'logout' %}" class="block text-red-500 hover:bg-red-100 rounded-lg py-2 px-4 transition duration-300 ease-in-out">
+                    Cerrar sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Medicamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-gray-700 text-center mb-6">Crear Medicamento</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="{{ form.nombre.id_for_label }}" class="block text-gray-700">Nombre del Medicamento</label>
+                {{ form.nombre }}
+                {% if form.nombre.errors %}
+                    <p class="text-red-500 text-sm">{{ form.nombre.errors }}</p>
+                {% endif %}
+            </div>
+
+            <div class="mb-4">
+                <label for="{{ form.precio.id_for_label }}" class="block text-gray-700">Precio</label>
+                {{ form.precio }}
+                {% if form.precio.errors %}
+                    <p class="text-red-500 text-sm">{{ form.precio.errors }}</p>
+                {% endif %}
+            </div>
+
+            <div class="mb-4">
+                <label for="{{ form.descripcion.id_for_label }}" class="block text-gray-700">Descripción</label>
+                {{ form.descripcion }}
+                {% if form.descripcion.errors %}
+                    <p class="text-red-500 text-sm">{{ form.descripcion.errors }}</p>
+                {% endif %}
+            </div>
+
+            <!-- Campo para seleccionar categoría -->
+            <div class="mb-4">
+                <label for="{{ form.categoria.id_for_label }}" class="block text-gray-700">Categoría</label>
+                {{ form.categoria }}
+                {% if form.categoria.errors %}
+                    <p class="text-red-500 text-sm">{{ form.categoria.errors }}</p>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                Crear Medicamento
+            </button>
+        </form>
+
+        <div class="mt-6 text-center">
+            <a href="{% url 'menu' %}" class="text-blue-500 hover:underline">Volver al Menú</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+

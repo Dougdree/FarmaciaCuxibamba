@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Transferencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Gestionar Transferencia de Medicamentos</h1>
+        </header>
+
+        <!-- Botón Regresar al Menú -->
+        <div class="text-right mb-6">
+            <a href="{% url 'menu' %}" class="inline-block text-blue-600 hover:text-blue-800 text-sm font-medium">
+                <button class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                    Regresar al Menú
+                </button>
+            </a>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="space-y-6">
+                <div class="mb-4">
+                    <label for="medicamento" class="block text-sm font-medium text-gray-700">Medicamento</label>
+                    {{ form.medicamento }}
+                </div>
+
+                <div class="mb-4">
+                    <label for="sucursal_origen" class="block text-sm font-medium text-gray-700">Sucursal Origen</label>
+                    {{ form.sucursal_origen }}
+                </div>
+
+                <div class="mb-4">
+                    <label for="sucursal_destino" class="block text-sm font-medium text-gray-700">Sucursal Destino</label>
+                    {{ form.sucursal_destino }}
+                </div>
+
+                <div class="mb-4">
+                    <label for="cantidad" class="block text-sm font-medium text-gray-700">Cantidad</label>
+                    {{ form.cantidad }}
+                </div>
+
+                <!-- Campo para seleccionar el estado -->
+                <div class="mb-4">
+                    <label for="estado" class="block text-sm font-medium text-gray-700">Estado de la Transferencia</label>
+                    <select name="estado" id="estado" class="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        <option value="PENDIENTE">PENDIENTE</option>
+                        <option value="COMPLETADA">COMPLETADA</option>
+                        <option value="CANCELADA">CANCELADA</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                    Realizar Transferencia
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+

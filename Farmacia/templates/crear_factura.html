@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Factura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Crear Factura</h1>
+            <p class="text-gray-600">Complete los campos para generar una nueva factura</p>
+        </header>
+
+        <form method="POST" class="space-y-6">
+            {% csrf_token %}
+
+            <!-- Formulario de factura -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div class="mb-4">
+                    <label for="cliente" class="block text-sm font-medium text-gray-700">Cliente</label>
+                    {{ factura_form.cliente }}
+                    {% if factura_form.cliente.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ factura_form.cliente.errors }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="sucursal" class="block text-sm font-medium text-gray-700">Sucursal</label>
+                    {{ factura_form.sucursal }}
+                    {% if factura_form.sucursal.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ factura_form.sucursal.errors }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="fecha" class="block text-sm font-medium text-gray-700">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" value="{{ factura_form.fecha.value }}" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    {% if factura_form.fecha.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ factura_form.fecha.errors }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="total" class="block text-sm font-medium text-gray-700">Total</label>
+                    <input type="text" id="total" name="total" value="{{ factura_form.total.value }}" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="0.00" readonly>
+                    {% if factura_form.total.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ factura_form.total.errors }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="metodo_de_pago" class="block text-sm font-medium text-gray-700">Método de Pago</label>
+                    {{ factura_form.metodo_de_pago }}
+                    {% if factura_form.metodo_de_pago.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ factura_form.metodo_de_pago.errors }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Formulario de ítem de factura -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800">Agregar Ítem de Factura</h3>
+                <div class="space-y-4">
+                    <div class="mb-4">
+                        <label for="medicamento" class="block text-sm font-medium text-gray-700">Medicamento</label>
+                        {{ item_factura_form.medicamento }}
+                        {% if item_factura_form.medicamento.errors %}
+                            <p class="text-red-500 text-sm mt-1">{{ item_factura_form.medicamento.errors }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="cantidad" class="block text-sm font-medium text-gray-700">Cantidad</label>
+                        {{ item_factura_form.cantidad }}
+                        {% if item_factura_form.cantidad.errors %}
+                            <p class="text-red-500 text-sm mt-1">{{ item_factura_form.cantidad.errors }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="subtotal" class="block text-sm font-medium text-gray-700">Subtotal</label>
+                        {{ item_factura_form.subtotal }}
+                        {% if item_factura_form.subtotal.errors %}
+                            <p class="text-red-500 text-sm mt-1">{{ item_factura_form.subtotal.errors }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                Crear Factura
+            </button>
+        </form>
+
+        <!-- Botones adicionales -->
+        <div class="flex justify-between mt-6">
+            <a href="{% url 'menu' %}" class="w-full text-center bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400 transition duration-300">
+                Volver al Menú
+            </a>
+            <a href="{% url 'ver_facturas' %}" class="w-full text-center bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                Ver Todas las Facturas
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
